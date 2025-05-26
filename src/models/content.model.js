@@ -1,6 +1,9 @@
 import mongoose from "mongoose"
 
 const cmsSchema = new mongoose.Schema({
+    documentName:{
+       type: String
+    },
      content1:{
         type: String
      },

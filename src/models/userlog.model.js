@@ -1,19 +1,16 @@
 import mongoose from "mongoose"
 
-const userSchema = new mongoose.Schema({
-     customeUrl:{
-        type: String,
-        required: true
+const cmsSchema = new mongoose.Schema({
+     content1:{
+        type: String
      },
-     channelId:{
-        type: String,
-        required: true
+     content2:{
+        type: String
      },
-    action:{
-        type: String,
-        required: true
+    content3:{
+        type: String
     },
-    notes:{
+    content4:{
         type: String
      }
 }, {
@@ -22,4 +19,4 @@ const userSchema = new mongoose.Schema({
 
 
 
-export const User = mongoose.model('Userschema', userSchema)
+export const Cms = mongoose.model('Cmsschema', cmsSchema)

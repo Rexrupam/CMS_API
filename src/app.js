@@ -1,6 +1,5 @@
 import express from "express"
 import HealthCheckRouter from "./router/healthCheck.route.js"
-import youtubeApi from "./router/youtube.router.js"
 import bodyParser from "body-parser"
 import cookieParser from "cookie-parser"
 import cors from "cors"
@@ -17,5 +16,4 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(cookieParser())
 
 app.use('/', HealthCheckRouter)
-app.use('/', youtubeApi)
 export { app };

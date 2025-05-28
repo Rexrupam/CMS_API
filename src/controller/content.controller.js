@@ -1,12 +1,11 @@
 import {Cms} from "../models/content.model.js"
 
 export const updateContent = async(req,res)=>{
-   try {
     const { content1, content2, content3, content4}= req.body
     if(!content1 && !content2 && !content3 && !content4 ){
        return res.status(400).json({message: "All fields are required"})
     }
-    
+    try{
     const cms = await Cms.findOneAndUpdate(
         {
             documentName: 'admin'
